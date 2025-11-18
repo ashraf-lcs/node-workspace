@@ -6,6 +6,13 @@ Routing Conventions and rules :
 3. Sub-directory will serve as route path eg; app/blog/first/page.tsx -> http://localhost:3000/blog/first
 4. Route files must be named page.js/page.tsx
 
-** Even if you don't have the layout file created in the app folder root, once theroot route is accessed it will be created by next.js **
+** Even if you don't have the layout.tsx file created in the app folder root, once theroot route is accessed it will be created by next.js **
 
-
+Dynamic Routes using path parameter : http://localhost:3000/product/{param}
+1. A dynamic path parameter can be represented in folder structure as "[parameter]" name with square bracket.
+2. the functional component inside this folder will have access to to the parameter 
+    eg; 
+        export default async function ProductDetails({ params }: { params: Promise<{ productId: string }> }) {
+        const productId = (await params).productId;
+        return <h1>Product details for product {productId}</h1>
+    }
