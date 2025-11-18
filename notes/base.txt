@@ -16,3 +16,5 @@ Dynamic Routes using path parameter : http://localhost:3000/product/{param}
         const productId = (await params).productId;
         return <h1>Product details for product {productId}</h1>
     }
+
+Nested dynamic routing : http://localhost:3000/product/{param1}/{param2}
