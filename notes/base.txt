@@ -1,1 +1,11 @@
 1. Create the project using npx create-next-app@latest
+
+Routing Conventions and rules : 
+1. File-based routing system
+2. Files inside App directory can be reached through route
+3. Sub-directory will serve as route path
+4. Route files must be named page.js/page.tsx
+
+** Even if you don't have the layout file created in the app folder root, once theroot route is accessed it will be created by next.js **
+
+
