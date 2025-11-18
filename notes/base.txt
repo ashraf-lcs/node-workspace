@@ -1,0 +1,1 @@
+1. Create the project using npx create-next-app@latest
